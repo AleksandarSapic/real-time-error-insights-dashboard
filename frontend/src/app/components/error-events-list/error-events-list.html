@@ -1,0 +1,84 @@
+<div class="error-events-container">
+  <h2>Error Events</h2>
+
+  <app-error-events-filter
+    (filterChange)="onFilterChange($event)"
+    (filterClear)="onFilterClear()">
+  </app-error-events-filter>
+
+  @if (error()) {
+    <div class="error-message">
+      {{ error() }}
+    </div>
+  }
+
+  @if (isLoading()) {
+    <app-loading-spinner />
+  }
+
+  @if (!isLoading() && dataSource().length === 0 && !error()) {
+    <div class="no-data">
+      No error events found.
+    </div>
+  }
+
+
+  @if (!isLoading() && dataSource().length > 0) {
+    <div class="table-wrapper">
+      <table mat-table [dataSource]="dataSource()" matSort matSortActive="timestamp" [matSortDirection]="sortDirection()"
+             (matSortChange)="onSortChange($event)" class="error-events-table">
+        <!-- Timestamp Column -->
+        <ng-container matColumnDef="timestamp">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by timestamp">Timestamp</th>
+          <td mat-cell *matCellDef="let event" data-label="Timestamp">{{ formatTimestamp(event.timestamp) }}</td>
+        </ng-container>
+
+        <!-- User ID Column -->
+        <ng-container matColumnDef="userId">
+          <th mat-header-cell *matHeaderCellDef>User ID</th>
+          <td mat-cell *matCellDef="let event" data-label="User ID">{{ event.userId }}</td>
+        </ng-container>
+
+        <!-- Browser Column -->
+        <ng-container matColumnDef="browser">
+          <th mat-header-cell *matHeaderCellDef>Browser</th>
+          <td mat-cell *matCellDef="let event" data-label="Browser">{{ event.browser }}</td>
+        </ng-container>
+
+        <!-- URL Column -->
+        <ng-container matColumnDef="url">
+          <th mat-header-cell *matHeaderCellDef>URL</th>
+          <td mat-cell *matCellDef="let event" data-label="URL">{{ event.url }}</td>
+        </ng-container>
+
+        <!-- Error Message Column -->
+        <ng-container matColumnDef="errorMessage">
+          <th mat-header-cell *matHeaderCellDef>Error Message</th>
+          <td mat-cell *matCellDef="let event" class="error-message-cell" data-label="Error Message">
+            {{ event.errorMessage }}
+          </td>
+        </ng-container>
+
+        <!-- Stack Trace Column -->
+        <ng-container matColumnDef="stackTrace">
+          <th mat-header-cell *matHeaderCellDef>Stack Trace</th>
+          <td mat-cell *matCellDef="let event" class="stack-trace-cell" data-label="Stack Trace">
+            <pre>{{ event.stackTrace }}</pre>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+
+      <mat-paginator
+        [length]="totalRecords()"
+        [pageSize]="pageSize()"
+        [pageIndex]="pageIndex()"
+        [pageSizeOptions]="pageSizeOptions"
+        (page)="onPageChange($event)"
+        showFirstLastButtons>
+      </mat-paginator>
+    </div>
+  }
+</div>

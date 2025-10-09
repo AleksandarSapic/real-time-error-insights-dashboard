@@ -1,0 +1,79 @@
+.error-events-container {
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.error-events-container h2 {
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.error-message {
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: #ffebee;
+  color: #c62828;
+  border-radius: 4px;
+  border-left: 4px solid #c62828;
+}
+
+.no-data {
+  padding: 48px;
+  text-align: center;
+  color: #757575;
+  font-size: 16px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.error-events-table {
+  width: 100%;
+  background: white;
+}
+
+.error-events-table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+  padding: 16px;
+  white-space: nowrap;
+}
+
+.error-events-table td {
+  padding: 16px;
+  vertical-align: top;
+}
+
+.error-message-cell {
+  max-width: 300px;
+  word-wrap: break-word;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  color: #d32f2f;
+}
+
+.stack-trace-cell {
+  max-width: 400px;
+}
+
+.stack-trace-cell pre {
+  margin: 0;
+  padding: 8px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.4;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+mat-paginator {
+  background-color: white;
+  border-top: 1px solid #e0e0e0;
+}

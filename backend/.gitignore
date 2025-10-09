@@ -1,0 +1,13 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Dependency directories
+node_modules/
+build/
+coverage/
+
+# IDE and editor files
+.vscode/
+.idea/

@@ -1,0 +1,57 @@
+<mat-card class="filter-card">
+  <mat-card-header>
+    <mat-card-title>
+      <mat-icon>filter_list</mat-icon>
+      Filter Error Events
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form [formGroup]="filterForm" class="filter-form">
+      <div class="filter-row">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Search</mat-label>
+          <input
+            matInput
+            formControlName="query"
+            placeholder="Search in error message, stack trace, or URL"
+          />
+          <mat-icon matPrefix>search</mat-icon>
+        </mat-form-field>
+      </div>
+
+      <div class="filter-row">
+        <mat-form-field appearance="outline">
+          <mat-label>Date Range</mat-label>
+          <mat-date-range-input [formGroup]="$any(filterForm.get('dateRange'))" [rangePicker]="dateRangePicker">
+            <input matStartDate formControlName="start" placeholder="Start date" />
+            <input matEndDate formControlName="end" placeholder="End date" />
+          </mat-date-range-input>
+          <mat-datepicker-toggle matSuffix [for]="dateRangePicker"></mat-datepicker-toggle>
+          <mat-date-range-picker #dateRangePicker></mat-date-range-picker>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>User ID</mat-label>
+          <input matInput formControlName="userId" placeholder="Filter by user ID" />
+          <mat-icon matPrefix>person</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Browser</mat-label>
+          <input matInput formControlName="browser" placeholder="Filter by browser" />
+          <mat-icon matPrefix>web</mat-icon>
+        </mat-form-field>
+      </div>
+
+      @if (hasFilters()) {
+        <div class="filter-actions">
+          <button mat-stroked-button type="button" (click)="onClearFilters()">
+            <mat-icon>clear</mat-icon>
+            Clear Filters
+          </button>
+        </div>
+      }
+    </form>
+  </mat-card-content>
+</mat-card>

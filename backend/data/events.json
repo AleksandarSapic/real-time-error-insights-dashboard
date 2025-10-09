@@ -1,0 +1,402 @@
+[
+  {
+    "timestamp": "2025-07-02T08:23:15Z",
+    "userId": "user-123",
+    "browser": "Chrome",
+    "url": "/dashboard",
+    "errorMessage": "Uncaught TypeError: undefined is not a function",
+    "stackTrace": "at Object.<anonymous> (main.ts:22)"
+  },
+  {
+    "timestamp": "2025-07-15T14:45:33Z",
+    "userId": "user-456",
+    "browser": "Firefox",
+    "url": "/dashboard",
+    "errorMessage": "Uncaught TypeError: undefined is not a function",
+    "stackTrace": "at Object.<anonymous> (main.ts:22)"
+  },
+  {
+    "timestamp": "2025-08-22T19:12:08Z",
+    "userId": "user-789",
+    "browser": "Safari",
+    "url": "/products",
+    "errorMessage": "Uncaught TypeError: undefined is not a function",
+    "stackTrace": "at Object.<anonymous> (main.ts:22)"
+  },
+  {
+    "timestamp": "2025-07-08T11:34:56Z",
+    "userId": "user-234",
+    "browser": "Chrome",
+    "url": "/products",
+    "errorMessage": "ReferenceError: 'cart' is not defined",
+    "stackTrace": "at addToCart (cart.ts:45)\n    at onClick (ProductCard.tsx:89)"
+  },
+  {
+    "timestamp": "2025-08-14T16:22:41Z",
+    "userId": "user-567",
+    "browser": "Firefox",
+    "url": "/products",
+    "errorMessage": "ReferenceError: 'cart' is not defined",
+    "stackTrace": "at addToCart (cart.ts:45)\n    at onClick (ProductCard.tsx:89)"
+  },
+  {
+    "timestamp": "2025-09-03T09:58:12Z",
+    "userId": "user-890",
+    "browser": "Edge",
+    "url": "/checkout",
+    "errorMessage": "Network request failed: 500 Internal Server Error",
+    "stackTrace": "at fetchPaymentData (api.ts:156)\n    at processCheckout (checkout.ts:78)"
+  },
+  {
+    "timestamp": "2025-07-19T13:27:39Z",
+    "userId": "user-345",
+    "browser": "Safari",
+    "url": "/checkout",
+    "errorMessage": "Network request failed: 500 Internal Server Error",
+    "stackTrace": "at fetchPaymentData (api.ts:156)\n    at processCheckout (checkout.ts:78)"
+  },
+  {
+    "timestamp": "2025-08-28T20:44:22Z",
+    "userId": "user-678",
+    "browser": "Brave",
+    "url": "/profile",
+    "errorMessage": "TypeError: Cannot read property 'name' of null",
+    "stackTrace": "at renderProfile (Profile.tsx:34)\n    at Component.render (react-dom.js:1234)"
+  },
+  {
+    "timestamp": "2025-09-11T07:15:47Z",
+    "userId": "user-912",
+    "browser": "Chrome",
+    "url": "/profile",
+    "errorMessage": "TypeError: Cannot read property 'name' of null",
+    "stackTrace": "at renderProfile (Profile.tsx:34)\n    at Component.render (react-dom.js:1234)"
+  },
+  {
+    "timestamp": "2025-07-24T15:03:28Z",
+    "userId": "user-246",
+    "browser": "Firefox",
+    "url": "/settings",
+    "errorMessage": "SyntaxError: Unexpected token '<' in JSON at position 0",
+    "stackTrace": "at JSON.parse (native)\n    at parseResponse (utils.ts:92)"
+  },
+  {
+    "timestamp": "2025-08-05T10:51:14Z",
+    "userId": "user-579",
+    "browser": "Safari",
+    "url": "/settings",
+    "errorMessage": "SyntaxError: Unexpected token '<' in JSON at position 0",
+    "stackTrace": "at JSON.parse (native)\n    at parseResponse (utils.ts:92)"
+  },
+  {
+    "timestamp": "2025-09-17T18:39:05Z",
+    "userId": "user-802",
+    "browser": "Edge",
+    "url": "/orders",
+    "errorMessage": "TypeError: map is not a function",
+    "stackTrace": "at OrderList (OrderList.tsx:67)\n    at renderOrders (orders.ts:23)"
+  },
+  {
+    "timestamp": "2025-07-12T12:18:52Z",
+    "userId": "user-135",
+    "browser": "Brave",
+    "url": "/orders",
+    "errorMessage": "TypeError: map is not a function",
+    "stackTrace": "at OrderList (OrderList.tsx:67)\n    at renderOrders (orders.ts:23)"
+  },
+  {
+    "timestamp": "2025-08-20T21:26:37Z",
+    "userId": "user-468",
+    "browser": "Chrome",
+    "url": "/search",
+    "errorMessage": "Network timeout after 30000ms",
+    "stackTrace": "at XMLHttpRequest.ontimeout (api.ts:201)\n    at searchProducts (search.ts:44)"
+  },
+  {
+    "timestamp": "2025-09-06T06:42:19Z",
+    "userId": "user-791",
+    "browser": "Firefox",
+    "url": "/search",
+    "errorMessage": "Network timeout after 30000ms",
+    "stackTrace": "at XMLHttpRequest.ontimeout (api.ts:201)\n    at searchProducts (search.ts:44)"
+  },
+  {
+    "timestamp": "2025-07-29T14:07:44Z",
+    "userId": "user-024",
+    "browser": "Safari",
+    "url": "/login",
+    "errorMessage": "ValidationError: Email format is invalid",
+    "stackTrace": "at validateEmail (validation.ts:15)\n    at handleLogin (auth.ts:88)"
+  },
+  {
+    "timestamp": "2025-08-11T17:53:26Z",
+    "userId": "user-357",
+    "browser": "Edge",
+    "url": "/login",
+    "errorMessage": "ValidationError: Email format is invalid",
+    "stackTrace": "at validateEmail (validation.ts:15)\n    at handleLogin (auth.ts:88)"
+  },
+  {
+    "timestamp": "2025-09-23T11:31:08Z",
+    "userId": "user-680",
+    "browser": "Brave",
+    "url": "/home",
+    "errorMessage": "RangeError: Maximum call stack size exceeded",
+    "stackTrace": "at recursiveFunction (utils.ts:123)\n    at getData (data.ts:56)"
+  },
+  {
+    "timestamp": "2025-07-05T08:49:52Z",
+    "userId": "user-913",
+    "browser": "Chrome",
+    "url": "/home",
+    "errorMessage": "RangeError: Maximum call stack size exceeded",
+    "stackTrace": "at recursiveFunction (utils.ts:123)\n    at getData (data.ts:56)"
+  },
+  {
+    "timestamp": "2025-08-17T22:14:35Z",
+    "userId": "user-246",
+    "browser": "Firefox",
+    "url": "/contact",
+    "errorMessage": "TypeError: Cannot set property 'value' of undefined",
+    "stackTrace": "at handleInputChange (ContactForm.tsx:42)\n    at onChange (input.ts:17)"
+  },
+  {
+    "timestamp": "2025-09-09T13:28:17Z",
+    "userId": "user-579",
+    "browser": "Safari",
+    "url": "/contact",
+    "errorMessage": "TypeError: Cannot set property 'value' of undefined",
+    "stackTrace": "at handleInputChange (ContactForm.tsx:42)\n    at onChange (input.ts:17)"
+  },
+  {
+    "timestamp": "2025-07-21T16:56:23Z",
+    "userId": "user-802",
+    "browser": "Edge",
+    "url": "/cart",
+    "errorMessage": "Network request failed: CORS policy blocked",
+    "stackTrace": "at fetch (native)\n    at updateCart (cart.ts:134)"
+  },
+  {
+    "timestamp": "2025-08-09T09:33:49Z",
+    "userId": "user-135",
+    "browser": "Brave",
+    "url": "/cart",
+    "errorMessage": "Network request failed: CORS policy blocked",
+    "stackTrace": "at fetch (native)\n    at updateCart (cart.ts:134)"
+  },
+  {
+    "timestamp": "2025-09-15T19:02:11Z",
+    "userId": "user-468",
+    "browser": "Chrome",
+    "url": "/cart",
+    "errorMessage": "Network request failed: CORS policy blocked",
+    "stackTrace": "at fetch (native)\n    at updateCart (cart.ts:134)"
+  },
+  {
+    "timestamp": "2025-07-14T10:47:38Z",
+    "userId": "user-791",
+    "browser": "Firefox",
+    "url": "/wishlist",
+    "errorMessage": "TypeError: undefined is not an object",
+    "stackTrace": "at getWishlistItems (wishlist.ts:29)\n    at render (WishlistPage.tsx:55)"
+  },
+  {
+    "timestamp": "2025-08-26T15:21:54Z",
+    "userId": "user-024",
+    "browser": "Safari",
+    "url": "/wishlist",
+    "errorMessage": "TypeError: undefined is not an object",
+    "stackTrace": "at getWishlistItems (wishlist.ts:29)\n    at render (WishlistPage.tsx:55)"
+  },
+  {
+    "timestamp": "2025-07-27T07:19:26Z",
+    "userId": "user-357",
+    "browser": "Edge",
+    "url": "/about",
+    "errorMessage": "SyntaxError: Invalid or unexpected token",
+    "stackTrace": "at eval (eval at <anonymous> (bundle.js:45))\n    at loadContent (about.ts:71)"
+  },
+  {
+    "timestamp": "2025-08-13T20:38:42Z",
+    "userId": "user-680",
+    "browser": "Brave",
+    "url": "/about",
+    "errorMessage": "SyntaxError: Invalid or unexpected token",
+    "stackTrace": "at eval (eval at <anonymous> (bundle.js:45))\n    at loadContent (about.ts:71)"
+  },
+  {
+    "timestamp": "2025-09-21T12:55:07Z",
+    "userId": "user-913",
+    "browser": "Chrome",
+    "url": "/blog",
+    "errorMessage": "TypeError: Cannot read property 'length' of undefined",
+    "stackTrace": "at renderPosts (Blog.tsx:38)\n    at componentDidMount (react.js:892)"
+  },
+  {
+    "timestamp": "2025-07-09T14:12:33Z",
+    "userId": "user-246",
+    "browser": "Firefox",
+    "url": "/blog",
+    "errorMessage": "TypeError: Cannot read property 'length' of undefined",
+    "stackTrace": "at renderPosts (Blog.tsx:38)\n    at componentDidMount (react.js:892)"
+  },
+  {
+    "timestamp": "2025-08-31T18:44:58Z",
+    "userId": "user-579",
+    "browser": "Safari",
+    "url": "/pricing",
+    "errorMessage": "ReferenceError: 'price' is not defined",
+    "stackTrace": "at calculateTotal (pricing.ts:61)\n    at onClick (PricingCard.tsx:27)"
+  },
+  {
+    "timestamp": "2025-09-12T08:27:14Z",
+    "userId": "user-802",
+    "browser": "Edge",
+    "url": "/pricing",
+    "errorMessage": "ReferenceError: 'price' is not defined",
+    "stackTrace": "at calculateTotal (pricing.ts:61)\n    at onClick (PricingCard.tsx:27)"
+  },
+  {
+    "timestamp": "2025-07-18T11:03:41Z",
+    "userId": "user-135",
+    "browser": "Brave",
+    "url": "/notifications",
+    "errorMessage": "Network request failed: 404 Not Found",
+    "stackTrace": "at fetchNotifications (api.ts:178)\n    at loadData (notifications.ts:93)"
+  },
+  {
+    "timestamp": "2025-08-24T16:48:29Z",
+    "userId": "user-468",
+    "browser": "Chrome",
+    "url": "/notifications",
+    "errorMessage": "Network request failed: 404 Not Found",
+    "stackTrace": "at fetchNotifications (api.ts:178)\n    at loadData (notifications.ts:93)"
+  },
+  {
+    "timestamp": "2025-09-07T21:15:52Z",
+    "userId": "user-791",
+    "browser": "Firefox",
+    "url": "/messages",
+    "errorMessage": "TypeError: Cannot convert undefined to object",
+    "stackTrace": "at parseMessage (messages.ts:104)\n    at handleNewMessage (chat.ts:67)"
+  },
+  {
+    "timestamp": "2025-07-23T13:52:18Z",
+    "userId": "user-024",
+    "browser": "Safari",
+    "url": "/messages",
+    "errorMessage": "TypeError: Cannot convert undefined to object",
+    "stackTrace": "at parseMessage (messages.ts:104)\n    at handleNewMessage (chat.ts:67)"
+  },
+  {
+    "timestamp": "2025-08-07T09:29:45Z",
+    "userId": "user-357",
+    "browser": "Edge",
+    "url": "/analytics",
+    "errorMessage": "RangeError: Invalid array length",
+    "stackTrace": "at createDataArray (analytics.ts:145)\n    at generateChart (chart.ts:82)"
+  },
+  {
+    "timestamp": "2025-09-18T17:06:31Z",
+    "userId": "user-680",
+    "browser": "Brave",
+    "url": "/analytics",
+    "errorMessage": "RangeError: Invalid array length",
+    "stackTrace": "at createDataArray (analytics.ts:145)\n    at generateChart (chart.ts:82)"
+  },
+  {
+    "timestamp": "2025-07-11T15:43:09Z",
+    "userId": "user-913",
+    "browser": "Chrome",
+    "url": "/reports",
+    "errorMessage": "TypeError: filter is not a function",
+    "stackTrace": "at filterReports (reports.ts:56)\n    at applyFilters (ReportsPage.tsx:121)"
+  },
+  {
+    "timestamp": "2025-08-19T22:18:56Z",
+    "userId": "user-246",
+    "browser": "Firefox",
+    "url": "/reports",
+    "errorMessage": "TypeError: filter is not a function",
+    "stackTrace": "at filterReports (reports.ts:56)\n    at applyFilters (ReportsPage.tsx:121)"
+  },
+  {
+    "timestamp": "2025-09-25T10:37:22Z",
+    "userId": "user-579",
+    "browser": "Safari",
+    "url": "/admin",
+    "errorMessage": "Network timeout after 60000ms",
+    "stackTrace": "at XMLHttpRequest.ontimeout (api.ts:201)\n    at loadAdminData (admin.ts:73)"
+  },
+  {
+    "timestamp": "2025-07-06T12:54:47Z",
+    "userId": "user-802",
+    "browser": "Edge",
+    "url": "/admin",
+    "errorMessage": "Network timeout after 60000ms",
+    "stackTrace": "at XMLHttpRequest.ontimeout (api.ts:201)\n    at loadAdminData (admin.ts:73)"
+  },
+  {
+    "timestamp": "2025-08-15T19:31:13Z",
+    "userId": "user-135",
+    "browser": "Brave",
+    "url": "/teams",
+    "errorMessage": "TypeError: Cannot read property 'members' of null",
+    "stackTrace": "at renderTeamList (Teams.tsx:49)\n    at componentDidUpdate (react.js:1045)"
+  },
+  {
+    "timestamp": "2025-09-02T07:08:38Z",
+    "userId": "user-468",
+    "browser": "Chrome",
+    "url": "/teams",
+    "errorMessage": "TypeError: Cannot read property 'members' of null",
+    "stackTrace": "at renderTeamList (Teams.tsx:49)\n    at componentDidUpdate (react.js:1045)"
+  },
+  {
+    "timestamp": "2025-07-30T14:45:04Z",
+    "userId": "user-791",
+    "browser": "Firefox",
+    "url": "/calendar",
+    "errorMessage": "ReferenceError: 'event' is not defined",
+    "stackTrace": "at addEvent (calendar.ts:88)\n    at onClick (CalendarView.tsx:156)"
+  },
+  {
+    "timestamp": "2025-08-23T11:22:51Z",
+    "userId": "user-024",
+    "browser": "Safari",
+    "url": "/calendar",
+    "errorMessage": "ReferenceError: 'event' is not defined",
+    "stackTrace": "at addEvent (calendar.ts:88)\n    at onClick (CalendarView.tsx:156)"
+  },
+  {
+    "timestamp": "2025-09-14T16:59:27Z",
+    "userId": "user-357",
+    "browser": "Edge",
+    "url": "/tasks",
+    "errorMessage": "TypeError: Assignment to constant variable",
+    "stackTrace": "at updateTask (tasks.ts:112)\n    at handleSave (TaskEditor.tsx:78)"
+  },
+  {
+    "timestamp": "2025-07-17T08:36:42Z",
+    "userId": "user-680",
+    "browser": "Brave",
+    "url": "/tasks",
+    "errorMessage": "TypeError: Assignment to constant variable",
+    "stackTrace": "at updateTask (tasks.ts:112)\n    at handleSave (TaskEditor.tsx:78)"
+  },
+  {
+    "timestamp": "2025-08-29T20:13:19Z",
+    "userId": "user-913",
+    "browser": "Chrome",
+    "url": "/projects",
+    "errorMessage": "Network request failed: 403 Forbidden",
+    "stackTrace": "at fetchProjects (api.ts:223)\n    at loadProjects (projects.ts:41)"
+  },
+  {
+    "timestamp": "2025-09-10T13:50:35Z",
+    "userId": "user-246",
+    "browser": "Firefox",
+    "url": "/projects",
+    "errorMessage": "Network request failed: 403 Forbidden",
+    "stackTrace": "at fetchProjects (api.ts:223)\n    at loadProjects (projects.ts:41)"
+  }
+]

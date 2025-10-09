@@ -1,0 +1,60 @@
+<div class="stats-container">
+  <div class="header">
+    <h2>Error Events Statistics</h2>
+    <div class="controls">
+      <mat-form-field appearance="outline" class="bucket-size-select">
+        <mat-label>Top Items</mat-label>
+        <mat-select [value]="bucketSize()" (selectionChange)="onBucketSizeChange($event.value)">
+          @for (size of bucketSizeOptions; track size) {
+            <mat-option [value]="size">{{ size }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <mat-card class="aggregation-selector">
+    <mat-card-content>
+      <div class="aggregation-options">
+        <span class="label">Select Charts:</span>
+        @for (option of aggregationOptions; track option.value) {
+          <mat-checkbox
+            [checked]="isAggregationSelected(option.value)"
+            (change)="toggleAggregation(option.value, $event.checked)">
+            {{ option.label }}
+          </mat-checkbox>
+        }
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  @if (error()) {
+    <div class="error-message">
+      {{ error() }}
+    </div>
+  }
+
+  @if (isLoading()) {
+    <app-loading-spinner />
+  }
+
+  @if (!isLoading() && stats() && visibleCharts().length > 0) {
+    <div class="charts-grid">
+      @for (chart of visibleCharts(); track chart.value) {
+        <mat-card class="chart-card">
+          <mat-card-content>
+            <div class="chart-wrapper">
+              <canvas [id]="chart.value + 'Chart'"></canvas>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      }
+    </div>
+  }
+
+  @if (!isLoading() && stats() && visibleCharts().length === 0) {
+    <div class="no-data">
+      Please select at least one chart to display.
+    </div>
+  }
+</div>
